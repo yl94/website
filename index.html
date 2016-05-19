@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="portfolio">
+    <!-- <h1>Web Design:</h1> -->
+    <ul>
+        <!-- {% for websites in site.data.websites %}
+        <li>
+            <a href="{{ websites.url }}">{{ websites.name }}</a>
+        </li>
+        {% endfor %} -->
+        <li>{{site.title}} </li>
+
+        <li>
+          <a href="http://eis.whu.edu.cn">{{site.school}}</a>
+        </li>
+
+        <li>
+          <a href="http://www.whu.edu.cn">{{site.affiliation}}</a>
+        </li>
+
+        <li>
+          <a href="#"></a>{{site.address}}
+        </li>
+
+        <li>
+          <a href="mailto:{{site.email}}">{{site.email}}</a>
+        </li>
+
+        <!-- <li><a href="http://sites.google.com/site/link2yulei/">Old WebPage</a></li> -->
+    </ul>
+</div>
+
+<div class="project">
+    <h1>Projects:</h1>
+    <ul>
+        {% for projects in site.data.projects %}
+        <li>
+            {{ projects.name }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="blog">
+    <h1>Blog Posts:</h1>
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
